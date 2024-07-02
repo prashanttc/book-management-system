@@ -71,6 +71,21 @@ app.put("/books/:id", (req, res) => {
   });
 });
 
+app.post("/login" , (req,res)=>{
+  const q = "SELECT * FROM login WHERE email = ?  AND password = ?";
+ 
+  const values = [
+    req.body.email,
+    req.body.password,
+  ];
+  db.query(q , [values], (err,data)=>{
+    if(err) return alert("login failed");
+     return res.json(data);
+  })
+
+
+})
+
 app.listen(8800, () => {
   console.log("Connected to backend.");
 });
