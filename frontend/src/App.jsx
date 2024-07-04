@@ -4,6 +4,7 @@ import Books from "./components/Books";
 import Add from "./components/Add";
 import Edit from "./components/edit";
 import Login from "./components/login";
+import Signup from "./components/signup";
 import Remove from "./components/Removee";
 import Update from "./components/Update";
 
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/Add" element={<Add/>}></Route>
           <Route path="/Remove" element={<Remove/>}></Route>
           <Route path="/edit" element={<Edit/>}></Route>
+          <Route path="/signup" element={<Signup/>}></Route>
           <Route path="/update/:id" element={<Update/>}></Route>
         </Routes> 
       </BrowserRouter>

@@ -26,19 +26,49 @@ console.log(err)
 }}
 
   return (
- <div className='flex flex-col p-0 justify-center items-center w-screen h-screen'> 
- <h1 className='mb-10 text-4xl font-bold'>ADD NEW BOOKS</h1>
-   <form action="" autoComplete='off' className='main w-[40%] rounded-3xl drop-shadow-2xl h-[80%] flex flex-col items-center bg-slate-200'>
-  <div className=' p-20 pb-10 text-lg'>
-  <input className='w-full mb-10 p-10 placeholder focus:outline-none  bg-slate-100 h-20 ' type="text" placeholder="enter title" onChange={handleChange} name="title"/>
-  <input className='w-full mb-10 p-10 placeholder focus:outline-none bg-slate-100 h-20 ' type="text" placeholder="enter description" onChange={handleChange} name="desc"/>
-  <input className='w-full mb-10 p-10 placeholder focus:outline-none bg-slate-100 h-20 ' type="number" placeholder="enter price" onChange={handleChange} name="price"/>
-  <input className='w-full mb-10 p-10 placeholder focus:outline-none bg-slate-100 ' type="text" placeholder=" select cover" onChange={handleChange} name="cover"/>
-<button className='w-full bg-green-500 hover:bg-green-600 text-white h-[50px] rounded-md' onClick={handleClick}>Add</button>
-<button className='w-full bg-slate-500 hover:bg-slate-600 text-white mt-5 h-[50px] rounded-md'><Link to="/Books">back</Link></button>
+    <div>
+    <section className="bg-gray-50 dark:bg-gray-900">
+<div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+    <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+        <div className="p-6 space-y-4 md:space-y-6  sm:p-8">
+            <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+                ADD NEW BOOK
+            </h1>
+            <form className="space-y-4 md:space-y-6 "  action="" autoComplete='off'>
+                <div>
+                    <label htmlFor="title" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Title</label>
+                    <input type="text" name="title" className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="enter title" onChange={handleChange} required=""/>
+                </div>
+                <div>
+                    <label htmlFor="description" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white " >Description</label>
+                    <input type="text" name="desc" placeholder="enter description" className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  onChange={handleChange} required=""/>
+                </div>
+                <div>
+                    <label htmlFor="price" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white " >Price</label>
+                    <input type="number" name="price" placeholder="enter price" className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  onChange={handleChange} required=""/>
+                </div>
+                <div>
+                    <label htmlFor="cover" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white " >Cover</label>
+                    <input type="text" name="cover" placeholder="select cover" className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  onChange={handleChange} required=""/>
+                </div>
+              
+                <button type="submit" className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" onClick={handleClick}><Link to="/books">Add</Link></button>
+                <button className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" ><Link to="/books">Back</Link></button>
+              
+            </form>
+        </div>
+    </div>
 </div>
-   </form>
- </div>
+</section>
+
+
+
+
+
+
+
+
+  </div>
   )
 }
 

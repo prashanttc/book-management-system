@@ -31,7 +31,7 @@ catch(err){
     <div>
      <div className="relative">
      <div className='main flex box w-full  text-white'>
-     <div className='sidebar flex flex-col overflow-hidden w-[20%] min-h-[100vh] z-10 fixed bg-gray-800 pt-10'>
+     <div className='sidebar flex flex-col overflow-hidden w-[20%] min-h-[100vh] z-10 fixed  bg-gray-50 dark:bg-gray-900 pt-10'>
       <h1 className='head  text-4xl pl-20  mb-20'>Manage Book</h1>
       <ul className='flex flex-col  text-2xl '>
       <li className='w-full flex h-[100px] hover:scale-90 transition duration-500  ease-in-out   border-b-[1px] border-slate-500 items-center justify-center'>

@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import axios from "axios";
-import { useNavigate , Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
-const login = () => {
+const signup = () => {
 
     const [email,setEmail] = useState('')
     const [password,setPassword] = useState('')  
@@ -11,15 +11,15 @@ const login = () => {
     
     function handleSubmit(event){
         event.preventDefault();
-        axios.post('http://localhost:8800/login', {email , password})
-     .then(res=>{
-        if(res.data === "success"){
-            Navigate("/books");
-        }
-        else{
-            alert("login failed");
-        }
-     })
+        axios.post('http://localhost:8800/signup', {email , password})
+        .then(res=>{
+            if(res.data === "success"){
+                Navigate("/login");
+            }
+            else{
+                alert("login failed");
+            }
+         })
     }
 
 
@@ -33,7 +33,7 @@ const login = () => {
       <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
               <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-                  Sign in to your account
+                  Create your account 
               </h1>
               <form className="space-y-4 md:space-y-6"  action="#">
                   <div>
@@ -53,11 +53,10 @@ const login = () => {
                             <label htmlFor="remember" className="text-gray-500 dark:text-gray-300">Remember me</label>
                           </div>
                       </div>
-                      <a href="#" className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Forgot password?</a>
                   </div>
-                  <button type="submit" className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" onClick={handleSubmit}>Sign in</button>
+                  <button type="submit" className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" onClick={handleSubmit}>Create account</button>
                   <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                      Don’t have an account yet? <a className="font-medium text-primary-600 hover:underline dark:text-primary-500"><Link to="/signup">Sign up</Link></a>
+                      already a member? <a href="#" className="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign in</a>
                   </p>
               </form>
           </div>
@@ -76,4 +75,4 @@ const login = () => {
   )
 }
 
-export default login
+export default signup
