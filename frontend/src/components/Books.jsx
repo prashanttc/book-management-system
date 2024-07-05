@@ -33,7 +33,7 @@ const Books = () => {
          <Link to="/Add"> Add new book </Link>
        </li>
        <li className='w-full flex h-[100px] hover:scale-90 transition duration-500  ease-in-out  border-b-[1px] border-slate-500 items-center justify-center'>
-         <Link to="/Remove"> <FontAwesomeIcon icon="fa-solid fa-house" />Delete book   </Link>
+         <Link to="/Remove">Delete book   </Link>
        </li>
        <li className='w-full flex h-[100px] hover:scale-90 transition duration-500  ease-in-out  border-b-[1px] border-slate-500 items-center justify-center'>
          <Link to="/edit"> Update book </Link>
